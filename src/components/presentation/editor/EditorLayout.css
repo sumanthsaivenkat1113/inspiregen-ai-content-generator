@@ -1,0 +1,45 @@
+.editor-layout {
+  display: grid;
+  grid-template-columns: 366px 1fr 400px;
+  height: 100vh;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.editor-left {
+  margin-top: 24px;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 16px;
+}
+
+.editor-center-wrapper {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: #f1f5f9;
+  padding: 24px;
+}
+
+.editor-center-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.editor-center-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+.editor-right {
+  margin-top: 24px;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  padding: 16px;
+}

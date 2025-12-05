@@ -1,0 +1,222 @@
+/* Import a vibrant, clean font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Roboto:wght@400;600&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212121; /* Darker background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Poster Container Styling V2 */
+.EventPosterTemplateTwo_poster-container-v2 {
+    width: 500px;
+    height: 880px;
+    
+    background-color: #1a1a1a; /* Dark grey container */
+    border-radius: 20px; 
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; 
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Abstract background waves/swirls */
+.background-wave-abstract {
+    position: absolute;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.08); /* Subtle white */
+    border-radius: 50% 50% 0 0; /* Creates wave-like shape */
+    filter: blur(15px);
+    z-index: 0;
+    animation: waveFlow 20s infinite ease-in-out alternate;
+}
+
+.wave-1 {
+    top: -30px;
+    left: -20%;
+    width: 140%;
+    background-color: rgba(160, 32, 240, 0.3); /* Electric Purple */
+    transform: rotate(5deg);
+}
+
+.wave-2 {
+    bottom: -30px;
+    left: -10%;
+    width: 120%;
+    background-color: rgba(0, 139, 139, 0.3); /* Bold Teal */
+    transform: rotate(-10deg);
+    animation-delay: 2s;
+}
+
+/* Abstract paint splatter */
+.background-splatter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center, rgba(255, 69, 0, 0.2) 0%, transparent 70%); /* Fiery Orange */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: splatterPulse 15s infinite ease-in-out;
+    z-index: 0;
+    filter: blur(20px);
+}
+
+@keyframes waveFlow {
+    0%, 100% { transform: translateX(0) rotate(var(--wave-rotation, 0deg)); }
+    50% { transform: translateX(20px) rotate(calc(var(--wave-rotation, 0deg) + 5deg)); }
+}
+.wave-1 { --wave-rotation: 5deg; }
+.wave-2 { --wave-rotation: -10deg; }
+
+@keyframes splatterPulse {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg) scale(1); opacity: 0.3; }
+    50% { transform: translate(-50%, -50%) rotate(180deg) scale(1.05); opacity: 0.4; }
+}
+
+/* Header Styling */
+.EventPosterTemplateTwo_header {
+    z-index: 2;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Thicker, subtle line */
+}
+
+.EventPosterTemplateTwo_title {
+    font-family: 'Montserrat', sans-serif; /* Modern, bold sans-serif */
+    font-size: 2.6em; 
+    font-weight: 900;
+    color: #00BFFF; /* Electric Blue (new accent) */
+    line-height: 1.1;
+    text-shadow: 2px 2px 5px rgba(160, 32, 240, 0.6); /* Purple glow */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.EventPosterTemplateTwo_tagline {
+    font-size: 1.1em;
+    color: #B0BEC5; /* Light blue-grey */
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Main Content (Image, Message, Icons) */
+.EventPosterTemplateTwo_main-content {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 0; 
+    z-index: 2;
+}
+
+.EventPosterTemplateTwo_image-mask {
+    width: 90%; 
+    height: 250px; /* Fixed height for consistent masked shape */
+    margin-bottom: 30px; 
+    overflow: hidden;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); /* Modern, edgy clip path */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border: 3px solid #FF4500; /* Fiery Orange border */
+    transition: clip-path 0.4s ease, border-color 0.4s ease;
+}
+
+.EventPosterTemplateTwo_image-mask:hover {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Straightens on hover */
+    border-color: #00BFFF; /* Blue on hover */
+}
+
+.EventPosterTemplateTwo_main-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+}
+
+.EventPosterTemplateTwo_message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #CFD8DC; /* Light blue-grey for message */
+    line-height: 1.4;
+    max-width: 90%;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.EventPosterTemplateTwo_event-details {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 90%;
+    padding: 10px 0;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.EventPosterTemplateTwo_detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFD700; /* Gold/Fiery Yellow */
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.EventPosterTemplateTwo_detail-item i {
+    font-size: 1.5em;
+    color: #00BFFF; /* Electric Blue icon */
+}
+
+/* Footer and Call to Action */
+.EventPosterTemplateTwo_footer {
+    border-top: 2px solid rgba(255, 255, 255, 0.1); 
+    padding-top: 25px;
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.EventPosterTemplateTwo_cta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    color: #1a1a1a; 
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border: none;
+    background-color: #00BFFF; /* Electric Blue button */
+    border-radius: 8px; 
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 191, 255, 0.5); /* Blue glow */
+    text-transform: uppercase;
+}
+
+/* Hover effect for CTA */
+.EventPosterTemplateTwo_cta:hover {
+    background-color: #FF4500; /* Fiery Orange on hover */
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.6); /* Orange glow */
+}

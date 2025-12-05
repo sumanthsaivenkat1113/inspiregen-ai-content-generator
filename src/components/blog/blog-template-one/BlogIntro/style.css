@@ -1,0 +1,9 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 12.5px 0;
+}
+
+.introduction-text{
+    width: 700px;
+}

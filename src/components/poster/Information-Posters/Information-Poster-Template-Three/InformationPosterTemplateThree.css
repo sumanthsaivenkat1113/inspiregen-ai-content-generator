@@ -1,0 +1,112 @@
+/* Magazine Editorial Style Poster */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+.InformationPosterTemplateThree_magazine-container {
+    width: 450px;
+    height: 700px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    font-family: "Inter", sans-serif;
+}
+
+/* Soft Radial Accent */
+.InformationPosterTemplateThree_bg-accent {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle at top right, #E8F7EE, #FDFDFD 65%);
+    top: -180px;
+    right: -180px;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+/* -------- Header -------- */
+.InformationPosterTemplateThree_header-v5 {
+    z-index: 2;
+    text-align: left;
+}
+
+.InformationPosterTemplateThree_title-v5 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.15;
+    margin-bottom: 6px;
+}
+
+.InformationPosterTemplateThree_tagline-v5 {
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 0.3px;
+}
+
+/* -------- Image Section -------- */
+.InformationPosterTemplateThree_imageFrame-v5 {
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+
+    z-index: 2;
+}
+
+.InformationPosterTemplateThree_mainImage-v5 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.InformationPosterTemplateThree_mainImage-v5:hover {
+    transform: scale(1.03);
+}
+
+/* -------- Message -------- */
+.InformationPosterTemplateThree_message-v5 {
+    z-index: 2;
+    font-size: 1.15em;
+    line-height: 1.55;
+    color: #2F3D2E;
+    border-left: 4px solid #4CAF50;
+    padding-left: 16px;
+    font-weight: 500;
+}
+
+/* -------- CTA -------- */
+.InformationPosterTemplateThree_footerCTA-v5 {
+    margin-top: auto;
+    z-index: 3;
+
+    align-self: flex-start;
+    padding: 12px 22px;
+
+    background: #4CAF50;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 0.95em;
+    cursor: pointer;
+
+    transition: all .3s ease;
+    box-shadow: 0 8px 18px rgba(76,175,80,0.25);
+}
+
+.InformationPosterTemplateThree_footerCTA-v5:hover {
+    background: #3e9b44;
+    transform: translateY(-3px);
+}

@@ -1,0 +1,198 @@
+/* === Base Container === */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  padding: 50px 15px;
+}
+
+.wrapper > div {
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  padding: 50px 40px;
+  font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c2c2c;
+  line-height: 1.8;
+  transition: background-color 0.3s ease;
+}
+
+.wrapper > div:hover {
+  background-color: #f7f9fc;
+}
+
+/* === Title === */
+.heading {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: -0.4px;
+}
+
+/* === Header Image === */
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto 30px;
+  display: block;
+  box-shadow: 0 6px 15px rgba(100, 100, 150, 0.12);
+  filter: grayscale(10%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image img:hover {
+  filter: grayscale(0);
+  transform: scale(1.04);
+}
+
+/* === Introduction Text === */
+.introduction-text {
+  font-size: 1.22rem;
+  color: #4b5563;
+  text-align: justify;
+  max-width: 720px;
+  margin: 0 auto 42px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* === Subheading === */
+.sub-heading {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.55rem;
+  color: #111827;
+  font-weight: 600;
+  margin-top: 45px;
+  margin-bottom: 16px;
+  border-left: 6px solid #a78bfa;
+  padding-left: 14px;
+  box-shadow: inset 2px 0 8px #a78bfa80;
+}
+
+/* === Main Content === */
+.content {
+  font-size: 1.07rem;
+  color: #374151;
+  max-width: 740px;
+  margin: 0 auto 38px;
+  line-height: 1.85;
+  font-weight: 400;
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+/* === Image Section === */
+.image-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 580px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(120, 120, 200, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-section img:hover {
+  box-shadow: 0 10px 30px rgba(120, 120, 220, 0.18);
+  transform: scale(1.06);
+}
+
+/* === Conclusion Section === */
+.conclusion-heading {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-top: 52px;
+  margin-bottom: 18px;
+  font-family: 'Merriweather', serif;
+}
+
+.conclusion-text {
+  font-size: 1.14rem;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.75;
+}
+
+/* === Blockquote === */
+blockquote {
+  background: #eef2ff;
+  border-left: 5px solid #a78bfa;
+  margin: 28px 0;
+  padding: 18px 28px;
+  border-radius: 8px;
+  font-style: italic;
+  color: #4b506d;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: inset 5px 0 15px #a78bfa44;
+}
+
+/* === Responsive === */
+@media (max-width: 960px) {
+  .wrapper > div {
+    padding: 35px 30px;
+  }
+
+  .heading {
+    font-size: 2.3rem;
+  }
+
+  .introduction-text {
+    font-size: 1.15rem;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+
+  .sub-heading {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper > div {
+    padding: 22px 16px;
+  }
+
+  .heading {
+    font-size: 1.85rem;
+  }
+
+  .sub-heading {
+    font-size: 1.25rem;
+  }
+
+  .conclusion-heading {
+    font-size: 1.45rem;
+  }
+
+  .introduction-text,
+  .content,
+  .conclusion-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  blockquote {
+    padding: 14px 20px;
+  }
+}

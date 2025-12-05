@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+.AdvertisementPosterTemplateOne_container {
+    width: 520px;
+    height: 1100px;
+
+    background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+    border-radius: 22px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* TOP STRIP — PREMIUM LOOK */
+.AdvertisementPosterTemplateOne_top-strip {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #ff3e3e, #ff8a00);
+    border-radius: 0 0 18px 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* BOTTOM STRIP */
+.AdvertisementPosterTemplateOne_bottom-strip {
+    margin-top: 15px;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, #ff8a00, #ff3e3e);
+    border-radius: 18px 18px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* DISCOUNT BADGE — REAL AD STYLE */
+.AdvertisementPosterTemplateOne_badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    background: #ffef00;
+    color: #111;
+    padding: 15px 20px;
+    font-size: 2.2rem;
+    font-weight: 900;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transform: rotate(-8deg);
+    z-index: 10;
+}
+
+/* HEADER AREA */
+.AdvertisementPosterTemplateOne_header {
+    margin-top: 110px;
+    text-align: center;
+}
+
+.AdvertisementPosterTemplateOne_title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #222;
+}
+
+.AdvertisementPosterTemplateOne_tagline {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* IMAGE */
+.AdvertisementPosterTemplateOne_image-wrapper {
+    width: 100%;
+    margin: 30px 0 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.22);
+}
+
+.AdvertisementPosterTemplateOne_image {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+/* MESSAGE — LIKE REAL ADS */
+.AdvertisementPosterTemplateOne_message {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+/* CTA — REAL AD STYLE BUTTON */
+.AdvertisementPosterTemplateOne_cta {
+    background: linear-gradient(90deg, #ff3e3e, #ff8a00);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    transition: 0.2s ease;
+}
+
+.AdvertisementPosterTemplateOne_cta:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}

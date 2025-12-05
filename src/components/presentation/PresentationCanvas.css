@@ -1,0 +1,208 @@
+/* .presentation-canvas-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 40px;
+  background: #f3f4f6;
+}
+
+.slide-container {
+  width: 900px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.slide-element {
+  transition: 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.slide-element:hover {
+  border-color: #60a5fa;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.slide-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.slide-subtitle {
+  font-size: 20px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.slide-heading {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 14px;
+}
+
+.slide-bullet {
+  font-size: 18px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 28px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Wrapper */
+.canvas-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Main Canvas Card */
+.canvas-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* No Slide Placeholder */
+.no-slide {
+  padding: 24px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* HoverBox */
+.hover-box {
+  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 8px;
+  padding: 6px;
+  transition: 0.15s;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.hover-box.hovered {
+  border-color: #93c5fd;
+  background: rgba(147, 197, 253, 0.06);
+}
+
+.hover-box.active {
+  border: 2px dashed #60a5fa;
+  padding: 8px;
+}
+
+/* Heading */
+.slide-heading {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Image */
+.slide-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Bullets */
+.bullets-container {
+  margin-top: 16px;
+}
+
+.bullet-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.bullet-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: #2563eb;
+  margin-top: 8px;
+}
+
+.bullet-text {
+  font-size: 16px;
+}
+
+/* Highlight Section */
+.slide-highlight {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: #fff;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  font-weight: 500;
+}
+
+/* CTA Button */
+.cta-wrapper {
+  margin-top: 18px;
+}
+
+.cta-btn {
+  background: #10b981;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.15s;
+}
+
+.cta-btn:hover {
+  background: #059669;
+}
+
+
+
+.canvas-wrapper.preview-mode {
+  pointer-events: none;   /* Disable all interactions */
+  transform: scale(1.1);  /* Slight zoom */
+  padding: 20px;
+}
+
+.canvas-wrapper.preview-mode .hover-box {
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+
+.preview-mode .hover-box.hovered,
+.preview-mode .hover-box.active {
+  outline: none !important;
+  border: none !important;
+  background: transparent !important;
+}

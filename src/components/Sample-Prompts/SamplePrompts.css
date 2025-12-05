@@ -1,0 +1,202 @@
+.sample-prompts {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 40px 40px;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #e6e9ef;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  font-family: "Inter", sans-serif;
+}
+
+.sample-prompts__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.sample-prompts__subtitle {
+  font-size: 1.05rem;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.section {
+  margin-bottom: 55px;
+}
+
+.section-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 24px;
+  padding-left: 10px;
+  border-left: 5px solid #3b82f6;
+}
+
+
+.poster-category {
+  margin-bottom: 35px;
+}
+
+.poster-category__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.sample-prompts__grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.sample-prompts__card {
+  background: #f8fafc;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+
+  color: #334155;
+  font-size: 0.97rem;
+  line-height: 1.55;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.sample-prompts__card:hover {
+  background: #f1f7ff;
+  border-color: #bfdbfe;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+
+  background: #3b82f6;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1rem;
+
+  box-shadow: 0 8px 22px rgba(59, 130, 246, 0.32);
+
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.poster-category {
+  margin-bottom: 38px;
+}
+
+.poster-category__header {
+  margin-bottom: 14px;
+}
+
+/* Gradient category tag */
+.poster-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  padding: 6px 14px;
+  border-radius: 50px;
+  color: white;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: default;
+
+  transition: transform 0.25s ease;
+}
+
+.poster-tag:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Icon animation inside tag */
+.icon-animate {
+  transition: transform 0.3s ease;
+}
+
+.poster-tag:hover .icon-animate {
+  transform: rotate(12deg) scale(1.1);
+}
+
+
+/* Toggle Buttons */
+.view-toggle {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid #d7dce3;
+
+  background: #f8fafc;
+  cursor: pointer;
+
+  font-size: 0.9rem;
+  color: #475569;
+
+  transition: all 0.25s ease;
+}
+
+.toggle-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.toggle-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* List mode */
+.sample-prompts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.list-mode {
+  width: 100%;
+  padding: 16px 22px;
+  font-size: 1rem;
+}
+
+
+/* Card hover remains same */
+.sample-prompts__card:hover {
+  background: #eef6ff;
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+}

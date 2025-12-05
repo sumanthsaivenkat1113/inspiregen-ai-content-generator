@@ -1,0 +1,222 @@
+/* Google fonts: cheerful & modern */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@500;700&display=swap");
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background (for preview only) */
+body {
+  background: linear-gradient(180deg, #fbfbfd 0%, #f0f6ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Poster card */
+.MoviePosterTemplateThree_poster-v3 {
+  position: relative;
+  width: 480px;
+  height: 720px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(18, 38, 63, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Hover lift */
+.MoviePosterTemplateThree_poster-v3:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 70px rgba(18, 38, 63, 0.12);
+}
+
+/* Hero image */
+.MoviePosterTemplateThree_hero-image {
+  position: absolute;
+  inset: 0;
+  height: 58%;
+  background: center/cover no-repeat
+    url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&s=bd2ffb5f6b15d0c34b1f2a7e5f1f8c49");
+  transform-origin: center;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  filter: brightness(0.95) saturate(1.02);
+  z-index: 1;
+}
+
+/* Slight parallax/scale on hover */
+.MoviePosterTemplateThree_poster-v3:hover .MoviePosterTemplateThree_hero-image {
+  transform: scale(1.03);
+}
+
+/* Light playful overlay for readability */
+.MoviePosterTemplateThree_image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.0) 0%,
+    rgba(255, 255, 255, 0.55) 55%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  z-index: 2;
+}
+
+/* Content block sits on bottom section with padding */
+.MoviePosterTemplateThree_content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 40px 30px 36px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title — friendly, bold and spaced */
+.MoviePosterTemplateThree_title-v3 {
+  font-family: "Quicksand", "Poppins", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #102033;
+  text-align: center;
+  line-height: 1.05;
+  margin-bottom: 8px;
+  display: inline-flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Each word has subtle motion on hover */
+.mp3-title-word {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.0);
+  border-radius: 8px;
+  transition: transform 0.28s ease;
+}
+
+.MoviePosterTemplateThree_poster-v3:hover .mp3-title-word {
+  transform: translateY(-4px);
+}
+
+/* Tagline — delicate & playful */
+.MoviePosterTemplateThree_tagline-v3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #ff6b6b;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+/* Accent line (subtle separator) */
+.MoviePosterTemplateThree_accent-line {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffb347, #ff6b6b);
+  border-radius: 6px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(255, 107, 107, 0.12);
+}
+
+/* Message block — light panel with soft border */
+.MoviePosterTemplateThree_message-v3 {
+  font-size: 16px;
+  color: #233347;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 86%;
+  margin-bottom: 22px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(246, 248, 252, 0.9);
+  border: 1px solid rgba(34, 51, 71, 0.06);
+  box-shadow: 0 8px 20px rgba(18, 38, 63, 0.04);
+}
+
+/* CTA — friendly pill button */
+.MoviePosterTemplateThree_cta-v3 {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff8a65, #ff6b6b);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.18);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  min-width: 260px;
+  text-align: center;
+}
+
+/* CTA hover */
+.MoviePosterTemplateThree_cta-v3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(255, 107, 107, 0.22);
+}
+
+/* Credits small text */
+.MoviePosterTemplateThree_credits {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #7b8a98;
+  opacity: 0.9;
+}
+
+/* Style for active-element — keeps your editor UX */
+.active-element {
+  outline: 2px dashed rgba(16, 32, 51, 0.12);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 520px) {
+  .MoviePosterTemplateThree_poster-v3 {
+    width: 320px;
+    height: 520px;
+    border-radius: 14px;
+  }
+
+  .MoviePosterTemplateThree_title-v3 {
+    font-size: 28px;
+  }
+
+  .MoviePosterTemplateThree_message-v3 {
+    font-size: 14px;
+    padding: 10px 12px;
+    max-width: 92%;
+  }
+
+  .MoviePosterTemplateThree_cta-v3 {
+    min-width: 220px;
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}

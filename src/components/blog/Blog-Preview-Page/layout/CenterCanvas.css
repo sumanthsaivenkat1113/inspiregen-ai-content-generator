@@ -1,0 +1,12 @@
+/* CenterCanvas.css */
+
+.center-canvas {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border-right: 1px solid #e5e7eb;
+}
+.center-canvas::-webkit-scrollbar {
+  display: none;
+}

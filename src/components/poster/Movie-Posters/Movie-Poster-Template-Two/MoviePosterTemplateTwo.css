@@ -1,0 +1,164 @@
+/* RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.MoviePosterTemplateTwo_poster-v3 {
+    position: relative;
+    width: 700px;
+    height: 1000px; /* Taller aspect ratio like real film posters */
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+}
+
+.MoviePosterTemplateTwo_poster-v3:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+}
+
+/* BACKGROUND IMAGE / MID LAYER */
+.MoviePosterTemplateTwo_layer-mid {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.55) contrast(1.25);
+}
+
+.MoviePosterTemplateTwo_layer-mid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.35) 60%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+}
+
+/* FRONT CONTENT */
+.MoviePosterTemplateTwo_layer-front {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TITLE */
+.MoviePosterTemplateTwo_title-v3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 30px rgba(255, 255, 255, 0.25),
+        0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.MoviePosterTemplateTwo_title-v3 span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.MoviePosterTemplateTwo_title-v3:hover span {
+    transform: translateY(-4px);
+}
+
+/* TAGLINE */
+.MoviePosterTemplateTwo_tagline-v3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ff4d4d;
+    font-weight: 600;
+    margin-bottom: 35px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* MESSAGE */
+.MoviePosterTemplateTwo_message-v3 {
+    font-size: 22px;
+    color: #f2f2f2;
+    text-align: center;
+    line-height: 1.45;
+    max-width: 85%;
+    margin: 0 auto 45px;
+    padding: 18px 22px;
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* CTA — MORE MINIMAL (Professional Movie Style) */
+.MoviePosterTemplateTwo_cta-v3 {
+    padding: 14px 40px;
+    border-radius: 6px;
+    background: #d32f2f;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 18px rgba(211, 47, 47, 0.5),
+        0 0 50px rgba(211, 47, 47, 0.25);
+    transition: all 0.35s ease;
+}
+
+.MoviePosterTemplateTwo_cta-v3:hover {
+    background: #e53935;
+    transform: translateY(-4px);
+    box-shadow:
+        0 6px 25px rgba(229, 57, 53, 0.7),
+        0 0 60px rgba(229, 57, 53, 0.35);
+}
+
+/* PARTICLES — CINEMATIC DUST, NOT RED SPARKS */
+.MoviePosterTemplateTwo_spark {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0.6;
+
+    filter: blur(1px) brightness(1.5);
+    animation: particle-rise 4s linear forwards;
+}
+
+@keyframes particle-rise {
+    from {
+        transform: translateY(0) translateX(0);
+        opacity: 0.7;
+    }
+    to {
+        transform: translateY(-250px) translateX(var(--x));
+        opacity: 0;
+    }
+}

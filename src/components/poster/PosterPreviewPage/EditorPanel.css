@@ -1,0 +1,121 @@
+
+:root {
+    --primary-color: #007bff; /* Vibrant Blue for accents */
+    --secondary-color: #6c757d; /* Muted Grey for secondary text */
+    --background-light: #f4f7f9; /* Lighter background */
+    --border-color: #dee2e6;
+    --card-background: #ffffff;
+    --danger-color: #dc3545; /* Red for deletion */
+    --spacing-small: 8px;
+    --spacing-medium: 15px;
+    --spacing-large: 24px;
+    --border-radius-base: 8px;
+    --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Global Reset for Better Consistency --- */
+.sidebar-right * {
+    box-sizing: border-box;
+}
+
+/* --- Sidebar Container --- */
+.sidebar-right {
+    /* Kept essential layout properties */
+    width: 100%;
+    padding: var(--spacing-large); /* Slightly more spacious */
+    background: var(--background-light); 
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* --- Heading Style --- */
+.sidebar-right h2 {
+    margin-bottom: var(--spacing-large); 
+    font-size: 22px; /* Slightly larger, more dominant */
+    font-weight: 700;
+    color: #343a40; /* Darker text for prominence */
+    border-bottom: 2px solid var(--border-color); /* Subtle separator */
+    padding-bottom: var(--spacing-small);
+}
+
+/* --- Card/Section Style --- */
+.editor-section {
+    background: var(--card-background);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius-base); 
+    box-shadow: var(--shadow-subtle); /* A deeper, softer shadow */
+    margin-bottom: var(--spacing-large);
+    transition: transform 0.2s ease-in-out; /* Add transition for interaction */
+}
+
+/* Optional: Subtle hover effect on sections */
+.editor-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Label Style --- */
+.editor-section label {
+    font-size: 15px; /* Slightly larger for readability */
+    font-weight: 600;
+    display: block;
+    margin-top: var(--spacing-medium); 
+    margin-bottom: 5px; /* Tighter to the input field */
+    color: #495057; /* Slightly softer than pure black */
+}
+
+/* --- Input Fields (Text, Textarea, Select) --- */
+.editor-section input[type="text"],
+.editor-section textarea,
+.editor-section select {
+    width: 100%;
+    padding: 10px 12px; /* More padding and horizontal space */
+    border-radius: var(--border-radius-base); 
+    border: 1px solid var(--border-color); /* Lighter border */
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+/* Focus State Improvement */
+.editor-section input[type="text"]:focus,
+.editor-section textarea:focus,
+.editor-section select:focus {
+    outline: none; /* Remove default outline */
+    border-color: var(--primary-color); /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Subtle blue glow */
+}
+
+/* --- Range Input --- */
+.editor-section input[type="range"] {
+    width: 100%;
+    margin: 10px 0; /* Add vertical margin for separation */
+}
+
+/* --- Delete Button --- */
+.EditorPanel_delete-btn {
+    margin-top: var(--spacing-large); 
+    padding: 12px 20px; /* More vertical padding */
+    background: var(--danger-color); 
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: var(--border-radius-base);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s;
+    text-transform: uppercase; /* Use uppercase for more emphasis */
+    letter-spacing: 0.5px;
+}
+
+.EditorPanel_delete-btn:hover {
+    background: #c82333; /* Darker red on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.EditorPanel_delete-btn:active {
+    transform: translateY(0); /* Press effect */
+}

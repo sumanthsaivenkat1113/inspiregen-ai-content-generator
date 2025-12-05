@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVOCAINE - Poster V3</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="poster-v3">
+    <!-- Back Layer -->
+    <div class="layer layer-back"></div>
+
+    <!-- Mid Layer - Hero Image -->
+    <div class="layer layer-mid">
+    </div>
+
+    <!-- Front Layer - Content -->
+    <div class="layer layer-front">
+      <!-- Title with Floating Letters -->
+      <h1 class="title-v3">
+        <span>N</span><span>O</span><span>V</span><span>O</span><span>C</span><span>A</span><span>I</span><span>N</span><span>E</span>
+      </h1>
+
+      <!-- Tagline -->
+      <p class="tagline-v3">Numb the Pain. Fuel the Rage.</p>
+
+      <!-- Main Message -->
+      <p class="message-v3">When the world goes numb, one man will feel everything.</p>
+
+      <!-- CTA -->
+      <div class="cta-v3">Experience the adrenaline rush. In theaters soon.</div>
+    </div>
+  </div>
+
+  <!-- Dynamic Sparks -->
+  <script>
+    function createSpark() {
+      const poster = document.querySelector('.poster-v3');
+      const spark = document.createElement('div');
+      spark.classList.add('spark');
+
+      const x = (Math.random() - 0.5) * 300;
+      spark.style.setProperty('--x', x + 'px');
+      spark.style.left = (Math.random() * 100) + '%';
+      spark.style.top = '85%';
+
+      poster.appendChild(spark);
+
+      setTimeout(() => spark.remove(), 2000);
+    }
+
+    // Create sparks every 300ms
+    setInterval(createSpark, 300);
+  </script>
+
+</body>
+
+</html>

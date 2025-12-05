@@ -1,0 +1,432 @@
+/* EditContentPage.css – Canva/Figma Pro Editor (Pure CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ========================================= */
+/*               CSS VARIABLES               */
+/* ========================================= */
+:root {
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Light Theme */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #e2e8f0;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --border: #cbd5e1;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --grip: #94a3b8;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --backdrop-blur: blur(12px);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --card-bg: rgba(30, 41, 59, 0.85);
+    --border: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --grip: #64748b;
+  }
+}
+
+/* ========================================= */
+/*               GLOBAL RESET                */
+/* ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================= */
+/*               LAYOUT                      */
+/* ========================================= */
+.editor-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ========================================= */
+/*               HEADER IMAGE                */
+/* ========================================= */
+.header-image {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  transition: var(--transition);
+}
+.header-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+.header-image img {
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  display: block;
+}
+.header-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 50%);
+  pointer-events: none;
+}
+
+/* ========================================= */
+/*               TYPOGRAPHY                  */
+/* ========================================= */
+.editable-title,
+.editable-intro {
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+.editable-title {
+  font-size: 2.75rem;
+ 
+}
+.editable-intro {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* Focus ring */
+.editable-title:focus,
+.editable-intro:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.08);
+  border-radius: var(--radius-lg);
+}
+
+/* ========================================= */
+/*               SECTION CARD                */
+/* ========================================= */
+.section-card {
+  position: relative;
+  background: var(--card-bg);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  overflow: hidden;
+}
+.section-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  pointer-events: none;
+  border-radius: inherit;
+}
+.section-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+.section-card.dragging {
+  opacity: 0.75;
+  transform: scale(1.03) !important;
+  z-index: 50;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+/* ========================================= */
+/*               DRAG HANDLE                 */
+/* ========================================= */
+.drag-handle {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.625rem;
+  background: rgba(148, 163, 184, 0.7);
+  border-radius: 9999px;
+  cursor: grab;
+  opacity: 0;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  z-index: 10; /* Above image */
+}
+.drag-handle:active {
+  cursor: grabbing;
+}
+.drag-handle svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.section-card:hover .drag-handle {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-4px);
+}
+.drag-handle:focus {
+  opacity: 1;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ========================================= */
+/*               DELETE BUTTON               */
+/* ========================================= */
+.delete-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.625rem;
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  z-index: 10; /* Above image */
+}
+.delete-btn:hover {
+  background: var(--danger-hover);
+  transform: scale(1.1);
+}
+.section-card:hover .delete-btn {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+/* ========================================= */
+/*               IMAGE WRAPPER               */
+/* ========================================= */
+.image-wrapper {
+  position: relative;
+  margin-bottom: 1.25rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  z-index: 0; /* Image stays behind icons */
+}
+.image-wrapper img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  transition: var(--transition);
+  z-index: 0;
+}
+.image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+/* ========================================= */
+/*               IMAGE UPLOAD BADGE          */
+/* ========================================= */
+.image-upload-label {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  backdrop-filter: blur(8px);
+  z-index: 10; /* Above image */
+}
+.image-upload-label:hover {
+  background: var(--accent);
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+.image-upload-label:hover svg {
+  color: white;
+}
+.image-upload-label input {
+  display: none;
+}
+.image-upload-label svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+/* ========================================= */
+/*               EDITABLE TEXT               */
+/* ========================================= */
+.editable-subheading,
+.editable-details {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  min-height: 2em;
+  transition: var(--transition);
+  position: relative;
+}
+.editable-subheading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+.editable-details {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.editable-subheading:focus,
+.editable-details:focus {
+  outline: none;
+  background: rgba(59, 130, 246, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* ========================================= */
+/*               ACTION BAR                  */
+/* ========================================= */
+.action-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+@media (min-width: 640px) {
+  .action-bar {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  min-width: 180px;
+  justify-content: center;
+}
+.add-btn {
+  background: white;
+  color: #374151;
+  border: 2px solid #e2e8f0;
+  box-shadow: var(--shadow-sm);
+}
+.add-btn:hover {
+  background: #f8fafc;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.save-btn {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  box-shadow: 0 8px 15px rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.save-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2));
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+.save-btn:hover::before {
+  transform: translateX(100%);
+}
+.save-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(59, 130, 246, 0.4);
+}
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========================================= */
+/*               EMPTY STATE                 */
+/* ========================================= */
+.empty-state {
+  text-align: center;
+  padding: 5rem 1rem;
+  color: var(--text-secondary);
+}
+.empty-state p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================= */
+/*               ANIMATIONS                  */
+/* ========================================= */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ========================================= */
+/*               UTILITIES                   */
+/* ========================================= */
+.hidden { display: none; }

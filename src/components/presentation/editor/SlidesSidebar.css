@@ -1,0 +1,112 @@
+/* Sidebar container */
+.slides-sidebar {
+  height: 83%;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.slides-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header row */
+.slides-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.slides-header h4 {
+  margin: 0;
+}
+
+.add-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #4338ca;
+}
+
+/* Slide item */
+.slide-item {
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.slide-item.active {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.slide-item:hover {
+  background: #f9fafb;
+}
+
+/* Slide title */
+.slide-title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Slide preview bullets */
+.slide-preview {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* Buttons row */
+.slide-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+}
+
+.SlidesSidebaraction-btn {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-size: 12px;
+  min-width: 70px;
+}
+
+.SlidesSidebaraction-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.SlidesSidebaraction-btn:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+/* Delete button */
+.SlidesSidebar-delete-btn {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #fda4a4;
+  background: #fee2e2;
+  color: #b91c1c;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.SlidesSidebar-delete-btn:hover {
+  background: #fecaca;
+}

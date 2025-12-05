@@ -1,0 +1,228 @@
+/* Import a modern, bold font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d; /* Very dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Poster Container Styling V2 */
+.EventPosterTemplateOne_poster-container-v2 {
+    width: 500px;
+    height: 900px;
+    
+    background-color: #1a1a1a; /* Dark grey base */
+    border-radius: 15px; 
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6); 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff; 
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Dynamic Geometric Shapes for background */
+.EventPosterTemplateOne_dynamic-shape {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle white overlay */
+    z-index: 0;
+    filter: blur(5px);
+    animation: rotateAndMove 20s infinite linear;
+}
+
+.EventPosterTemplateOne_shape-1 {
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #00FFFF, #FF00FF); /* Cyan to Magenta */
+    clip-path: polygon(0% 15%, 15% 0%, 100% 85%, 85% 100%); /* Diagonal cut */
+    animation-delay: 0s;
+}
+
+.EventPosterTemplateOne_shape-2 {
+    bottom: -70px;
+    right: -70px;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #FFFF00, #FF69B4); /* Yellow to Hot Pink */
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Inverse diagonal */
+    animation-delay: -7s;
+}
+
+.EventPosterTemplateOne_shape-3 {
+    top: 30%;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(90deg, #00FF00, #00BFFF); /* Green to Deep Sky Blue */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Diamond shape */
+    animation-delay: -14s;
+}
+
+@keyframes rotateAndMove {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 0.8; }
+    25% { transform: translate(10px, 10px) rotate(45deg); opacity: 0.9; }
+    50% { transform: translate(0, 0) rotate(90deg); opacity: 0.8; }
+    75% { transform: translate(-10px, -10px) rotate(135deg); opacity: 0.9; }
+    100% { transform: translate(0, 0) rotate(180deg); opacity: 0.8; }
+}
+
+/* Header Styling */
+.EventPosterTemplateOne_header {
+    z-index: 2;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.EventPosterTemplateOne_title {
+    font-family: 'Oswald', sans-serif; /* Tall, bold font */
+    font-size: 3em; 
+    font-weight: 700;
+    color: #00FFFF; /* Cyan accent */
+    line-height: 1.1;
+    text-shadow: 2px 2px 5px rgba(255, 0, 255, 0.7); /* Magenta glow */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.EventPosterTemplateOne_tagline {
+    font-size: 1.2em;
+    color: #E0E0E0;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+}
+
+/* Main Content (Image, Message, Icons) */
+.EventPosterTemplateOne_main-content {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 0; 
+    z-index: 2;
+}
+
+.EventPosterTemplateOne_image-clip {
+    width: 90%; 
+    height: 220px; /* Fixed height for consistent clipping */
+    overflow: hidden; /* Clip image content */
+    border-radius: 10px;
+    margin-bottom: 25px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 3px solid #FF00FF; /* Magenta border */
+    transform: perspective(1000px) rotateX(5deg); /* Slight 3D tilt */
+    transition: transform 0.4s ease-out;
+}
+
+.EventPosterTemplateOne_image-clip:hover {
+    transform: perspective(1000px) rotateX(0deg) scale(1.02);
+}
+
+.EventPosterTemplateOne_festival-image {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Fill the clipped area */
+    display: block;
+}
+
+.EventPosterTemplateOne_message {
+    font-size: 21px;
+    font-weight: 650;
+    color: #F8F8F8;
+    line-height: 1.4;
+    max-width: 90%;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.EventPosterTemplateOne_feature-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items to the top if text wraps */
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.EventPosterTemplateOne_icon-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 30%; /* Ensure even spacing */
+}
+
+.EventPosterTemplateOne_icon-block i {
+    font-size: 2.5em; 
+    color: #FFFF00; /* Yellow for icons */
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.7); /* Subtle glow */
+    transition: transform 0.3s ease-out;
+}
+
+.EventPosterTemplateOne_icon-block:nth-child(2) i { color: #00FF00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); } /* Green */
+.EventPosterTemplateOne_icon-block:nth-child(3) i { color: #FF00FF; text-shadow: 0 0 10px rgba(255, 0, 255, 0.7); } /* Magenta */
+
+
+.EventPosterTemplateOne_icon-block i:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.EventPosterTemplateOne_icon-block span {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #E0E0E0;
+    line-height: 1.2;
+}
+
+/* Footer and Call to Action */
+.EventPosterTemplateOne_footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-top: 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.EventPosterTemplateOne_cta {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1a1a1a; 
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    border: none;
+    background-color: #00FFFF; /* Cyan button */
+    border-radius: 5px; /* Sharp corners */
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4); /* Cyan glow */
+    text-transform: uppercase;
+}
+
+/* Hover effect for CTA */
+.EventPosterTemplateOne_cta:hover {
+    background-color: #FF69B4; /* Hot Pink on hover */
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.6); /* Hot Pink glow */
+}

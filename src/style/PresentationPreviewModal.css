@@ -1,0 +1,61 @@
+.presentation-preview-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation-preview-wrapper {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  overflow: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.25s ease;
+}
+
+.presentation-preview-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.presentation-preview-close:hover {
+  background: #333;
+}
+
+.presentation-preview-canvas-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,153 @@
+/* ================================
+   NAVBAR BASE STYLES
+=================================== */
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================================
+   BRAND LOGO
+=================================== */
+.navbar__brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar__brand:hover {
+  color: #1e3a8a;
+}
+
+/* ================================
+   NAV BUTTONS
+=================================== */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar__btn {
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Login button */
+.navbar__btn--login {
+  background-color: transparent;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+}
+
+.navbar__btn--login:hover {
+  background-color: #f3f4f6;
+}
+
+/* Signup button */
+.navbar__btn--signup {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  color: white;
+}
+
+.navbar__btn--signup:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+/* ---------- PREVIEW BUTTON ---------- */
+
+.navbar__btn--preview {
+  background: #6b7280; /* Gray-600 */
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.navbar__btn--preview:hover {
+  background: #4b5563; /* Gray-700 */
+  transform: translateY(-1px);
+}
+
+.navbar__btn--preview:active {
+  background: #374151; /* Gray-800 */
+  transform: translateY(0);
+}
+
+/* Keep spacing consistent */
+.navbar__btn + .navbar__btn--preview {
+  margin-left: 10px;
+}
+
+
+
+.navbar__btn--logout {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.navbar__btn--logout:hover {
+  background: #d9363e;
+}
+
+
+
+
+
+/* ================================
+   RESPONSIVE DESIGN
+=================================== */
+@media (max-width: 768px) {
+  .navbar__container {
+    padding: 14px 20px;
+  }
+
+  .navbar__brand {
+    font-size: 1.4rem;
+  }
+
+  .navbar__actions {
+    gap: 10px;
+  }
+
+  .navbar__btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}

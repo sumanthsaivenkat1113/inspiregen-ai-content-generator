@@ -1,0 +1,144 @@
+/* .presentation-editor-panel {
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+}
+
+.editor-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.editor-section {
+  margin-bottom: 22px;
+}
+
+.editor-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.editor-input,
+.editor-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 14px;
+  outline: none;
+}
+
+.editor-input:focus,
+.editor-textarea:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.delete-btn {
+  margin-top: 20px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+} */
+
+
+
+
+
+
+
+.presentation-editor-panel {
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.presentation-editor-panel::-webkit-scrollbar {
+  display: none;
+}
+
+.editor-title {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.editor-section {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.editor-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.editor-input,
+.editor-textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 12px;
+}
+
+.editor-textarea {
+  min-height: 80px;
+}
+
+/* .PresentationEditorPanel-delete-btn {
+  width: 100%;
+  padding: 10px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.PresentationEditorPanel-delete-btn:hover {
+  background: #fecaca;
+} */
+
+
+.PresentationEditorPanel-delete-btn {
+  background: #ef4444;
+  color: #fff;
+  padding: 6px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.PresentationEditorPanel-delete-btn:hover {
+  background: #dc2626;
+}

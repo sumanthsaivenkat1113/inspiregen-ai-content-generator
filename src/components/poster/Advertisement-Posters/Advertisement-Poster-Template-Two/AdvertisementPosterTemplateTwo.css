@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #ffffff;
+    --primary-text: #1a1a1a;
+    --accent-color: #ffc700; /* Vibrant Yellow/Gold */
+    --font-family: 'Montserrat', sans-serif;
+}
+
+.AdPosterV5_container {
+    width: 400px;
+    height: 657px;
+    background: var(--primary-bg);
+    border-radius: 12px;
+    font-family: var(--font-family);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    color: var(--primary-text);
+}
+
+/* HEADER / TITLE AREA (Strong Typographic Impact) */
+.AdPosterV5_header {
+    grid-row: 2;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.AdPosterV5_tagline {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.AdPosterV5_title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 0.95;
+    color: var(--primary-text);
+    text-transform: uppercase;
+}
+
+/* IMAGE BLOCK - Positioned absolutely to sit 'behind' or 'above' other elements */
+.AdPosterV5_image-wrapper {
+    margin-top: 15px;
+    width: 100%;
+
+    z-index: 5;
+    /* padding: 0 40px; */
+}
+
+.AdPosterV5_image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Perfect for product display */
+    border-radius: 8px;
+    /* Blend mode for a design touch */
+    mix-blend-mode: multiply; 
+    /* opacity: 0.85;  */
+    transition: transform 0.4s ease;
+}
+
+.AdPosterV5_image-wrapper:hover .AdPosterV5_image {
+    transform: scale(1.02);
+}
+
+/* MESSAGE / DESCRIPTION */
+.AdPosterV5_offer {
+    grid-row: 3;
+    padding: 10px 0 20px 0;
+    text-align: left;
+    z-index: 10; /* Ensures text is readable over the image */
+}
+
+.AdPosterV5_message {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 5px;
+}
+
+.AdPosterV5_secondary-message {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* CTA & BADGE FOOTER BAR */
+.AdPosterV5_footer {
+    grid-row: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    margin: 0 -25px; /* Overrides the main container padding */
+    background: var(--accent-color);
+    flex-shrink: 0;
+    z-index: 15;
+}
+
+.AdPosterV5_badge {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--primary-text);
+    text-transform: uppercase;
+}
+
+.AdPosterV5_cta {
+    padding: 12px 20px;
+    background: var(--primary-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.AdPosterV5_cta:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.AdPosterV5_cta i {
+    margin-left: 6px;
+}
+
+/* --- Utility Classes --- */
+
+.poster-element {
+    cursor: pointer;
+    user-select: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.active-element {
+    /* Use a box shadow for a clean selection highlight */
+    box-shadow: 0 0 0 3px var(--accent-color); 
+    border-radius: 4px;
+}

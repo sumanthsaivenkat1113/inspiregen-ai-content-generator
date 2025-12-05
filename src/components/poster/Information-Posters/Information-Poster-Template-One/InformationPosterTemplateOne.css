@@ -1,0 +1,112 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* ROOT COLORS — clean, neutral palette */
+:root {
+    --bg: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-light: #4f4f4f;
+    --accent: #0a7e7e;
+    --accent-light: #e3f4f4;
+    --border-light: #e5e7eb;
+}
+
+/* POSTER WRAPPER */
+.InformationPosterTemplateOne_container {
+    width: 480px;
+    height: 720px;
+    background: var(--bg);
+    border-radius: 22px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    padding: 40px 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+
+    position: relative;
+}
+
+/* HEADER */
+.InformationPosterTemplateOne_header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.InformationPosterTemplateOne_title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.InformationPosterTemplateOne_tagline {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+/* IMAGE */
+.InformationPosterTemplateOne_image-wrapper {
+    width: 100%;
+    margin: 24px 0;
+}
+
+.InformationPosterTemplateOne_image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+
+    transition: transform 0.25s ease;
+}
+
+.InformationPosterTemplateOne_image:hover {
+    transform: scale(1.015);
+}
+
+/* MESSAGE */
+.InformationPosterTemplateOne_message {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-dark);
+    margin: 10px 0 25px;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+/* FOOTER CTA */
+.InformationPosterTemplateOne_footer {
+    margin-top: auto;
+}
+
+.InformationPosterTemplateOne_cta {
+    background: var(--accent);
+    color: white;
+    padding: 14px 30px;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.InformationPosterTemplateOne_cta:hover {
+    background: #066262;
+    transform: translateY(-2px);
+}
+
+/* Active Element Outline for Editor Mode */
+.active-element {
+    outline: 2px dashed #0a7e7e;
+    outline-offset: 4px;
+}

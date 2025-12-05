@@ -1,0 +1,100 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+/* MAIN CONTAINER */
+.InformationPosterTemplateTwo_v5_container {
+    width: 360px;
+    min-height: 620px;
+    background: #ffffff;
+    padding: 32px 26px;
+    border-radius: 0; /* magazine feel */
+    display: flex;
+    flex-direction: column;
+    color: #111;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    font-family: "Inter", sans-serif;
+}
+
+/* HEADER */
+.InformationPosterTemplateTwo_v5_header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.InformationPosterTemplateTwo_v5_title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.InformationPosterTemplateTwo_v5_title-underline {
+    width: 60px;
+    height: 3px;
+    background: #111;
+    margin: 10px auto 14px auto;
+}
+
+.InformationPosterTemplateTwo_v5_tagline {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+}
+
+/* IMAGE */
+.InformationPosterTemplateTwo_v5_image-wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 20px 0 18px 0;
+}
+
+.InformationPosterTemplateTwo_v5_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.InformationPosterTemplateTwo_v5_image:hover {
+    transform: scale(1.03);
+}
+
+/* MESSAGE */
+.InformationPosterTemplateTwo_v5_message {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: #222;
+    margin: 16px 0 26px 0;
+    font-weight: 500;
+}
+
+/* CTA */
+.InformationPosterTemplateTwo_v5_footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.InformationPosterTemplateTwo_v5_cta {
+    border: 1px solid #111;
+    background: transparent;
+    color: #111;
+    padding: 10px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+}
+
+.InformationPosterTemplateTwo_v5_cta:hover {
+    background: #111;
+    color: #fff;
+}

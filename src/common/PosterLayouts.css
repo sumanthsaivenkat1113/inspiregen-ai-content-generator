@@ -1,0 +1,497 @@
+/* src/common/PosterLayouts.css */
+
+/* ============================================= */
+/* GLOBAL POSTER BASE                            */
+/* ============================================= */
+.poster-layout {
+  --primary: #ef4444;
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  --radius: 16px;
+
+  width: 700px;
+  height: 1000px;
+  margin: 40px auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  position: relative;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ============================================= */
+/* CTA BUTTON – Shared & Themed                  */
+/* ============================================= */
+.cta {
+  --cta-bg: var(--primary);
+  --cta-hover: #dc2626;
+
+  background: var(--cta-bg);
+  border: none;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 9999px;
+  font: 600 1.1rem/1 "Inter", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background: var(--cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+  outline: none;
+}
+
+/* ============================================= */
+/* LAYOUT 4 – Clean Grid & Emphasis              */
+/* ============================================= */
+.layout-four {
+  --theme: #22c55e;
+  --theme-dark: #16a34a;
+
+  display: flex;
+  flex-direction: column;
+  padding: clamp(2rem, 5vw, 3rem);
+  gap: 2rem;
+  background: #fff;
+}
+
+.layout-four-top {
+  border-bottom: 3px solid var(--theme);
+  padding-bottom: 1rem;
+}
+
+.layout-four-title {
+  font-size: clamp(2.8rem, 8vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin: 0;
+  color: #111827;
+}
+
+.layout-four-date {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.layout-four-bottom {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+}
+
+.layout-four-image-container {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.layout-four-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.layout-four-image-container:hover .layout-four-image {
+  transform: scale(1.04);
+}
+
+.layout-four-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.layout-four-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  line-height: 1.45;
+  color: #374151;
+  font-style: italic;
+}
+
+.cta-four {
+  --cta-bg: var(--theme);
+  --cta-hover: var(--theme-dark);
+  align-self: flex-start;
+}
+
+/* ============================================= */
+/* LAYOUT 5 – Diagonal + Typographic Emphasis    */
+/* ============================================= */
+.layout-five {
+  --secondary: #06b6d4;
+  --secondary-dark: #0891b2;
+
+  background: #111827;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.layout-five-diagonal-bg {
+  position: absolute;
+  inset: -30%;
+  background: var(--secondary);
+  opacity: 0.85;
+  transform: rotate(12deg) translate(-22%, -28%);
+  z-index: 1;
+}
+
+.layout-five-image-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.25;
+}
+
+.layout-five-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.layout-five-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(4rem, 8vw, 5rem) clamp(2rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.layout-five-title {
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 900;
+  line-height: 0.88;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.layout-five-title .emphasis {
+  color: var(--secondary);
+  display: block;
+}
+
+.layout-five-subtitle {
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 300;
+  max-width: 78%;
+  margin-top: 2rem;
+}
+
+.cta-five {
+  --cta-bg: var(--secondary);
+  --cta-hover: var(--secondary-dark);
+  margin-top: 3rem;
+  align-self: flex-start;
+}
+
+/* ============================================= */
+/* LAYOUT 6 – Magazine Overlay                   */
+/* ============================================= */
+.layout-six {
+  --accent: #f97316;
+  --accent-dark: #ea580c;
+
+  background: #f3f4f6;
+  position: relative;
+}
+
+.layout-six-image-container {
+  position: absolute;
+  inset: 0;
+}
+
+.layout-six-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(35%) contrast(1.1);
+  transition: filter 0.4s ease;
+}
+
+.layout-six:hover .layout-six-image {
+  filter: grayscale(20%) contrast(1.15);
+}
+
+.layout-six-category-tag {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  background: #fff;
+  color: #111827;
+  padding: 0.5rem 1.1rem;
+  font: 700 0.85rem/1 "Inter", sans-serif;
+  letter-spacing: 0.15em;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+}
+
+.layout-six-text-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  background: rgba(255, 255, 255, 0.96);
+  padding: clamp(2rem, 5vw, 3rem);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.layout-six-title {
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+  color: #111827;
+}
+
+.layout-six-divider {
+  width: 4rem;
+  height: 0.35rem;
+  background: var(--accent);
+  margin: 0.8rem 0 1rem;
+}
+
+.layout-six-subtitle {
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.cta-six {
+  --cta-bg: var(--accent);
+  --cta-hover: var(--accent-dark);
+}
+
+
+/* ============================================= */
+/* LAYOUT 7 – Split Screen + Gradient Overlay    */
+/* ============================================= */
+.layout-seven {
+  --accent: #8b5cf6;
+  --accent-dark: #7c3aed;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+.layout-seven-left {
+  padding: clamp(3rem, 7vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.layout-seven-badge {
+  align-self: flex-start;
+  background: var(--accent);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font: 700 0.8rem/1 "Inter";
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.layout-seven-title {
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.layout-seven-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  opacity: 0.9;
+  max-width: 90%;
+}
+
+.cta-seven {
+  --cta-bg: var(--accent);
+  --cta-hover: var(--accent-dark);
+  align-self: flex-start;
+}
+
+.layout-seven-right {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.layout-seven-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(15, 23, 42, 0.8));
+}
+
+/* ============================================= */
+/* LAYOUT 8 – Floating Card + Animated Words     */
+/* ============================================= */
+.layout-eight {
+  --highlight: #ec4899;
+  --highlight-dark: #db2777;
+
+  position: relative;
+  background: #111;
+  overflow: hidden;
+}
+
+.layout-eight-bg-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.layout-eight-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.2);
+  transition: filter 0.5s ease;
+}
+
+.layout-eight:hover .layout-eight-bg-image img {
+  filter: brightness(0.5) contrast(1.3);
+}
+
+.layout-eight-card {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: clamp(2.5rem, 6vw, 4rem);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.layout-eight-title {
+  font-size: clamp(3.2rem, 10vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin: 0 0 1rem;
+  color: #111827;
+}
+
+.layout-eight-word {
+  display: inline-block;
+  margin: 0 0.15em;
+  transition: all 0.3s ease;
+}
+
+.layout-eight-word:hover {
+  color: var(--highlight);
+  transform: translateY(-4px);
+}
+
+.layout-eight-subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.cta-eight {
+  --cta-bg: var(--highlight);
+  --cta-hover: var(--highlight-dark);
+}
+
+/* ============================================= */
+/* LAYOUT 9 – Geometric Cutout + Asymmetry       */
+/* ============================================= */
+.layout-nine {
+  --primary: #10b981;
+  --primary-dark: #059669;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.layout-nine-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+}
+
+.layout-nine-cutout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: var(--primary);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.layout-nine-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(3rem, 7vw, 5rem);
+  max-width: 55%;
+}
+
+.layout-nine-tag {
+  font: 700 0.85rem/1 "Inter";
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.layout-nine-title {
+  font-size: clamp(3.5rem, 9vw, 5.8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.layout-nine-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  opacity: 0.95;
+  margin-bottom: 2rem;
+}
+
+.cta-nine {
+  --cta-bg: white;
+  --cta-hover: #f3f4f6;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.cta-nine:hover {
+  color: var(--primary-dark);
+}

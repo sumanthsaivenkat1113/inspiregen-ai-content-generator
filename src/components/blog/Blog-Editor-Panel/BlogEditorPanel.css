@@ -1,0 +1,64 @@
+.sidebar-right {
+  height: 100%;
+  width: 320px;
+  background: #ffffff;
+  padding: 20px;
+  border-left: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar-right h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.editor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-right textarea {
+  width: 100%;
+  height: 90px;
+  resize: vertical;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.sidebar-right input[type="range"] {
+  width: 100%;
+}
+
+.sidebar-right input[type="color"] {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.sidebar-right select {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.sidebar-right::-webkit-scrollbar {
+  display: none;
+}
+.EditorPanel_delete-btn {
+  background: #ef4444;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.EditorPanel_delete-btn:hover {
+  background: #dc2626;
+}
