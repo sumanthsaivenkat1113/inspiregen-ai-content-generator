@@ -2,7 +2,7 @@
 
 ### **Create compelling, high-quality content using the Llama-3.1-8B-Instruct model (Hugging Face) — Built with React + Vite**
 
-![InspireGen Banner](screenshots/APP.png)
+![InspireGen Banner](screenshots/App.png)
 
 **InspireGen** is a modern, fast, and fully modular **AI content generation application** built with **React**, **Vite**, and a clean, scalable architecture.
 It allows users to generate **blogs, social posts, marketing copy, descriptions, and creative content** — all powered by a connected AI model.
