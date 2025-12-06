@@ -1,17 +1,25 @@
+<Br>
+
 # **🚀 InspireGen — AI-Powered Content Generator**
 
 ### **Create compelling, high-quality content using the Llama-3.1-8B-Instruct model (Hugging Face) — Built with React + Vite**
 
-![InspireGen Banner](screenshots/App.png)
+![InspireGen Banner](screenshots/APP.png)
 
 **InspireGen** is a modern, fast, and fully modular **AI content generation application** built with **React**, **Vite**, and a clean, scalable architecture.
 It allows users to generate **blogs, social posts, marketing copy, descriptions, and creative content** — all powered by a connected AI model.
+
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface)](https://huggingface.co/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
 
 ---
 
 ## 🌐 **Live Demo**
 
-👉 **[inspiregen](https://inspiregen.netlify.app/)**
+👉 **[inspiregen.netlify.app](https://inspiregen.netlify.app/)**
 
 ---
 
@@ -60,6 +68,30 @@ Perfect for:
 * Businesses automating content creation
 
 ---
+
+
+
+## 📘 Technical Case Study — InspireGen
+
+For an in-depth breakdown of InspireGen’s architecture, prompt engineering system, API integration strategy, UI design patterns, and performance optimizations, check out the full technical case study:
+
+👉 **Technical Case Study: InspireGen**
+[https://sumanthsaivenkat-portffolio.netlify.app/case-study/inspiregen](https://sumanthsaivenkat-portffolio.netlify.app/case-study/inspiregen)
+
+This case study covers:
+
+* 🧠 System design & workflow pipelines
+* 🏗️ Modular React architecture
+* 🧩 Prompt engineering and JSON schema validation
+* 🤖 Multi-model AI integration (LLaMA, HF Router, Image APIs)
+* ⚡ Performance considerations with Vite
+* 🔐 Secure environment variable usage
+* 🎨 Template rendering strategies (Blog, Presentation, Poster)
+
+It is a deep-dive document created for **developers, recruiters, and senior engineers** who want to understand the engineering decisions behind InspireGen.
+
+---
+
 
 ## ✨ **Features**
 
@@ -195,6 +227,7 @@ InspireGen is built with a clean, scalable, and production-ready architecture th
 
 ### 🔧 High-Level Pipeline
 
+<pre>
 User Input Terminal  
         ↓  
 Prompt Engineering Layer  
@@ -206,11 +239,12 @@ Validated JSON Response
 Template Rendering (React Components)  
         ↓  
 Final Output (Rendered UI)
-
+</pre>
 ---
 
 ## 📝 Blog Generation Workflow
 
+<pre>
 User Input Terminal  
         ↓  
 Prompt Engineering Layer  
@@ -222,11 +256,12 @@ Validated Blog JSON Response
 Blog Template Rendering (React Components)  
         ↓  
 Final Blog Output (Fully Rendered UI)
-
+</pre>
 ---
 
 ## 📊 Presentation Generation Workflow
 
+<pre>
 User Input Terminal  
         ↓  
 Prompt Engineering Layer  
@@ -238,11 +273,13 @@ Validated Presentation JSON Response
 Presentation Template Rendering (React Components)  
         ↓  
 Final Presentation Output (Fully Rendered UI)
+</pre>
 
 ---
 
 ## 🎨 Poster Generation Workflow
 
+<pre>
 User Input Terminal  
         ↓  
 Prompt Engineering Layer  
@@ -252,11 +289,13 @@ Validated Poster JSON
 Poster Component Rendering (React Components)  
         ↓  
 Final Poster Output (Fully Rendered UI)
+</pre>
 
 ---
 
 ## 🖼️ Image Generation Workflow
 
+<pre>
 A clean 4-step pipeline that converts user intent → keywords → images → UI-ready JSON.
 
 User Input  
@@ -266,6 +305,7 @@ Keyword Extraction
 Image API Fetch (Pexels, Pixabay, Unsplash)  
         ↓  
 Image JSON → UI Rendering
+</pre>
 
 ---
 
